@@ -1,0 +1,52 @@
+import check from "../../server/src/game-logic/checkForChess.js"
+import figureMoves from "./figureMoves.js"
+
+function status(color,board) {
+
+    const boarCopy = JSON.parse(JSON.stringify(board))
+    const enemyColor = color === "white" ? "black" : "white"
+    
+    const areMovesPossible = checkIfPossibleMoves(enemyColor,boarCopy)
+    const isCheck = check.checkIfInChess(enemyColor,boarCopy)
+    return statusUpdate(areMovesPossible,isCheck,color) 
+}
+
+function statusUpdate(areMovesPossible,isCheck,color) {
+   if(areMovesPossible)  return {
+            ending: false,
+            winner: null,
+        }
+
+    if(!isCheck) return {
+        ending: true,
+        winner: null,
+    }
+
+    return {
+        ending: true,
+        winner: color
+    }
+}
+
+function checkIfPossibleMoves(color,boardCopy) {
+    const pieces = []
+    for(row=0;row<8;row++) {
+        for(col=0;col<8;col++) {
+            if (boardCopy[row][col]?.figureColor === color) pieces.push([col,row])
+        }
+    }
+
+    return pieces.some(piece => {
+        const board = JSON.parse(JSON.stringify(boarCopy))
+        const moves = figureMoves.touchPiece(board,piece)
+        return moves.length > 0
+    })
+    
+}
+
+
+
+export default { status }
+
+
+

@@ -1,0 +1,67 @@
+html.darkmode {
+    --body-bg: #0b0c0f;
+
+    --nav-color: #f5f5f5;
+    --nav-background: #15171c;
+    --nav-link-hover: rgba(230, 196, 119, 0.15);
+    --nav-theme-switcher: #0b0c0f;
+
+    --login-bg: #0b0c0f;
+    --login-border: #f5f5f5;
+    --login-title-color: #f5f5f5;
+    --login-input-border: #15171c;
+    --login-input-background: #2b2d34;
+    --login-placeholder: #777b87;
+    --login-input-focus-border: #b99a56;
+    --login-input-hover-bg: #41434c;
+    --login-input-focus-bg: #181a20;
+    --login-input-box-shadow: 0 0 0 3px rgb(217 181 104 / 9%);
+    --login-main-gold: #e6c477;
+    --login-submit-btn: #17130b;
+    --login-register-link: #9699a3;
+
+    --not-found-background-center: #181a20;
+    --not-found-background-middle: #15171c;
+    --not-found-background-outer: #0b0c0f;
+    --not-found-card-background: rgba(21, 23, 28, 0.95);
+    --not-found-card-border: #b99a56;
+    --not-found-text-color: #f5f5f5;
+    --not-found-text-muted: #9699a3;
+    --not-found-accent-color: #e6c477;
+    --not-found-accent-hover: #f0d594;
+    --not-found-button-text: #17130b;
+}
+
+html.lightmode {
+    --body-bg: #dadada;
+
+    --nav-color: #111111;
+    --nav-background: #ffffff;
+    --nav-link-hover: rgba(0, 0, 0, 0.08);
+    --nav-theme-switcher: #eeeeee;
+
+    --login-bg: #f8fafc;
+    --login-border: #e2e8f0;
+    --login-title-color: #2a2a2a;
+    --login-input-border: #cbd5e1;
+    --login-input-background: #ffffff;
+    --login-placeholder: #94a3b8;
+    --login-input-focus-border: #b99a56;
+    --login-input-hover-bg: #f1f5f9;
+    --login-input-focus-bg: #ffffff;
+    --login-input-box-shadow: 0 0 0 3px rgba(185, 154, 86, 0.15);
+    --login-main-gold: #b99a56;
+    --login-submit-btn: #2d2617;
+    --login-register-link: #64748b;
+
+    --not-found-background-center: #ffffff;
+    --not-found-background-middle: #f8fafc;
+    --not-found-background-outer: #dadada;
+    --not-found-card-background: rgba(255, 255, 255, 0.95);
+    --not-found-card-border: #b99a56;
+    --not-found-text-color: #2a2a2a;
+    --not-found-text-muted: #64748b;
+    --not-found-accent-color: #b99a56;
+    --not-found-accent-hover: #c9ad70;
+    --not-found-button-text: #ffffff;
+}

@@ -1,0 +1,56 @@
+.alert {
+    position: fixed;
+
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    min-width: 300px;
+    max-width: 500px;
+
+    background-color: #242424;
+    color: white;
+
+    border: 1px solid #c9a227;
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+
+    z-index: 1000;
+}
+
+.alert-text {
+    padding: 15px 20px;
+
+    font-size: 16px;
+    text-align: center;
+}
+
+.alert-progress {
+    height: 4px;
+    width: 100%;
+
+    background-color: #c9a227;
+
+    animation-name: alertProgress;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+.error-box {
+    width: 100%;
+    text-align: center;
+    color: red;
+}
+
+@keyframes alertProgress {
+    from {
+        width: 100%;
+    }
+
+    to {
+        width: 0%;
+    }
+}

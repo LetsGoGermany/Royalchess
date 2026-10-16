@@ -1,0 +1,283 @@
+
+.login-page {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--login-bg);
+    color: var(--login-title-color);
+
+    padding: 32px 20px;
+    box-sizing: border-box;
+
+    font-family: Inter, system-ui, -apple-system, sans-serif;
+}
+
+/* Login-Inhalt */
+
+.login-container {
+    width: 100%;
+    max-width: 560px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    border: solid 1px var(--login-border);
+    padding: 100px;
+    border-radius: 15px;
+}
+
+/* Logo */
+
+.login-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 19px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.login-logo-icon {
+    font-size: 36px;
+    line-height: 1;
+}
+
+.login-logo-icon img {
+    height: 54px;
+}
+
+
+
+.login-heading {
+    text-align: center;
+}
+
+.login-heading h1 {
+    margin: 0 0 10px;
+
+    font-size: 27px;
+    font-weight: 650;
+    letter-spacing: -0.8px;
+}
+
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.login-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.login-input-group label {
+    color: var(--login-title-color);
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* E-Mail- und Passwortfeld */
+
+.login-input-group input {
+    width: 100%;
+    height: 48px;
+
+    padding: 0 14px;
+    box-sizing: border-box;
+
+    background-color: var(--login-input-background);
+    border: 1px solid var(--login-input-border);
+    border-radius: 9px;
+
+    color: var(--login-title-color);
+    font-family: inherit;
+    font-size: 14px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        background-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.login-title {
+    font-size: 200%;
+}
+
+.login-input-group input::placeholder {
+    color: var(--login-placeholder)
+}
+
+.login-input-group input:hover {
+    border-color: var(--login-input-hover-bg);
+}
+
+.login-input-group input:focus {
+    border-color: var(--login-input-focus-border);
+    background-color: var(--login-input-focus-bg);
+    box-shadow: var(--login-input-box-shadow);
+}
+
+/* Passwort-Überschrift */
+
+.login-password-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Passwort vergessen */
+
+.login-forgot-password {
+    padding: 0;
+
+    background: none;
+    border: none;
+
+    color: var(--login-main-gold);
+    font-family: inherit;
+    font-size: 12px;
+
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.login-forgot-password:hover {
+    color: var(--login-main-gold);
+}
+
+/* Passwortfeld mit Auge */
+
+.login-password-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.login-password-wrapper input {
+    padding-right: 46px;
+}
+
+/* Auge-Button */
+
+.login-toggle-password {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 46px;
+    height: 48px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0;
+
+    background: transparent;
+    border: none;
+    border-radius: 9px;
+
+    color: var(--login-placeholder);
+    cursor: pointer;
+
+    transition: color 0.2s ease;
+}
+
+.login-toggle-password:hover {
+    color: var(--login-main-gold);
+}
+
+.login-toggle-password:focus-visible {
+    outline: 2px solid var(--login-main-gold);
+    outline-offset: -4px;
+}
+
+/* Anmelden-Button */
+
+.login-submit {
+    width: 100%;
+    height: 48px;
+
+    margin-top: 2px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--login-main-gold);
+    border: 1px solid var(--login-main-gold);
+    border-radius: 9px;
+
+    color: var(--login-submit-btn);
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 650;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.15s ease;
+}
+
+.login-submit:hover {
+    background-color: var(--login-main-gold);
+    border-color: var(--login-main-gold);
+}
+
+.login-submit:active {
+    transform: scale(0.99);
+}
+
+.login-submit:focus-visible {
+    outline: 2px solid var(--login-main-gold);
+    outline-offset: 3px;
+}
+
+/* Registrierung */
+
+.login-register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+    margin: -8px 0 0;
+
+    color: var(--login-register-link);
+    font-size: 13px;
+}
+
+.login-register a {
+    color: var(--login-main-gold);
+    font-weight: 500;
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+}
+
+.login-register a:hover {
+    text-decoration: underline;
+}
+
+
+
+@media (max-width: 400px) {
+    .login-container {
+        max-width: 100%;
+    }
+
+    .login-heading h1 {
+        font-size: 24px;
+    }
+}
+
